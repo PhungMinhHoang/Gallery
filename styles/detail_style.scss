@@ -1,0 +1,56 @@
+@import "variable";
+
+@import "mixin";
+
+@import "sidebar";
+@import "header";
+@import "footer";
+
+/* Setup basics CSS */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  //font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  cursor: pointer;
+}
+input,
+textarea,
+button {
+  outline: none;
+  box-shadow: none;
+  font-family: "Lato", sans-serif;
+}
+/* Your style start from here */
+
+.gallery {
+  &__item {
+    width: 100%;
+    height: auto;
+    padding: 2px 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}

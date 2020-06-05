@@ -1,0 +1,15 @@
+1. Quản lý các danh mục. VD: Project, Contruction, Furniture
+    - 1 danh mục gồm nhiều nhóm sản phẩm. VD: HOUSES VILLAS, CAFE SHOP, APARTMENTS PENHOUSE
+    * Chọn các nhóm sản phẩm của danh mục ưu thích làm menu header
+
+2. Quản lý sản phẩm gồm:    + 1 ảnh đại diện sản phẩm
+                            + Tên sản phẩm
+                            + Mô tả (ngắn gọn)
+                            + Album Ảnh chi tiết
+
+3. Quản lý tin tức gồm: + 1 ảnh đại diện
+                        + Tiêu đề
+                        + Mô tả (ngắn gọn)
+
+*Các phần nhập mô tả cần hỗ trợ texteditor (ckeditor,...)
+                

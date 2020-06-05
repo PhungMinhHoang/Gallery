@@ -1,0 +1,107 @@
+@import "variable";
+
+@import "mixin";
+
+@import "sidebar";
+@import "header";
+@import "footer";
+
+/* Setup basics CSS */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  //font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  cursor: pointer;
+}
+input,
+textarea,
+button {
+  outline: none;
+  box-shadow: none;
+  font-family: "Lato", sans-serif;
+}
+/* Your style start from here */
+@import "animate";
+
+.wrapper {
+  background-image: url(../images/slider-1-slide-3-1770x742.jpg);
+  background-size: cover;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: #fff;
+
+  h1 {
+    font-size: 80px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 70px;
+    }
+    @include mobile {
+      font-size: 50px;
+    }
+  }
+  p{
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .button {
+    margin-top: 25px;
+
+    color: #ffffff;
+    
+    border-color: #00aff0;
+
+    overflow: hidden;
+    display: inline-block;
+    min-width: 175px;
+    padding: 17px 33px 15px;
+    font-size: 18px;
+    line-height: 1.34;
+    border: 2px solid;
+    font-family: "Teko", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    user-select: none;
+
+    &:hover{
+      background-color: #00aff0;
+    }
+  }
+}
