@@ -1,5 +1,6 @@
 .header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
   
     position: fixed;
@@ -11,6 +12,10 @@
 
     &__menu-list{
       display: flex;
+
+      @include mobile{
+        display: none;
+      }
     }
 
     &__menu-item{

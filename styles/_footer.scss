@@ -2,6 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include mobile{
+    justify-content: center;
+  }
+  @include tablet{
+    justify-content: center;
+  }
 
   position: fixed;
   bottom: 0;
@@ -14,6 +20,13 @@
 
   &__copyright {
     color: #fff;
+
+    @include mobile{
+      display: none;
+    }
+    @include tablet{
+      display: none;
+    }
   }
   .social {
     &__list {
@@ -38,6 +51,16 @@
       }
       &--pi {
         background: #eb5755;
+      }
+      &--up {
+        //margin-left: 1rem;
+        background: grey;
+        @include mobile{
+          display: none;
+        }
+        @include tablet{
+          display: none;
+        }
       }
     }
     &__link {

@@ -35,7 +35,7 @@ a:focus {
   width: 250px;
   position: fixed;
   top: 60px;
-  left: -250px;
+  right: -250px;
   height: 100vh;
   z-index: 999;
   background: #fff;
@@ -48,7 +48,7 @@ a:focus {
 }
 
 #sidebar.active {
-  left: 0;
+  right: 0;
 }
 
 .overlay {
@@ -121,6 +121,9 @@ ul ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -135,6 +138,12 @@ ul ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 479px) {
+  .header__menu-list {
+    display: none;
+  }
 }
 
 .header__menu-item {
@@ -159,8 +168,36 @@ ul ul a {
   padding: 0 10px;
 }
 
+@media (max-width: 479px) {
+  .footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1023px) {
+  .footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .footer__copyright {
   color: #fff;
+}
+
+@media (max-width: 479px) {
+  .footer__copyright {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1023px) {
+  .footer__copyright {
+    display: none;
+  }
 }
 
 .footer .social__list {
@@ -198,6 +235,22 @@ ul ul a {
 
 .footer .social__item--pi {
   background: #eb5755;
+}
+
+.footer .social__item--up {
+  background: grey;
+}
+
+@media (max-width: 479px) {
+  .footer .social__item--up {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1023px) {
+  .footer .social__item--up {
+    display: none;
+  }
 }
 
 .footer .social__link {
@@ -254,8 +307,25 @@ button {
   position: relative;
 }
 
+@media (min-width: 480px) and (max-width: 1023px) {
+  .gallery__item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 479px) {
+  .gallery__item {
+    width: 100%;
+  }
+}
+
 .gallery__item-name {
   display: none;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: auto;
 }
 
 .gallery__item:hover img {
@@ -268,23 +338,6 @@ button {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  width: 100%;
   color: #fff;
-}
-
-.gallery__item img {
-  width: 100%;
-}
-
-@media (max-width: 479px) {
-  .gallery__item {
-    width: 100%;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 1023px) {
-  .gallery__item {
-    width: 50%;
-  }
 }
 /*# sourceMappingURL=style.css.map */

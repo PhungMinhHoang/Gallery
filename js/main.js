@@ -8,12 +8,10 @@ $(document).ready(function () {
         $('.overlay').toggleClass('active');
     });
 
-    // Plugin masonry layout
-    $('.gallery').masonry({
-        // options
-        itemSelector: '.gallery__item',
-        //columnWidth: 200
-    });
-
+    //Scroll to top
+    $('#scrollToTop').on("click",function(e){
+        e.preventDefault();
+        window.scrollTo(0,0)
+    })
 
 });

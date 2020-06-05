@@ -29,7 +29,7 @@ a:focus {
     width: 250px;
     position: fixed;
     top: 60px;
-    left: -250px;
+    right: -250px;
     height: 100vh;
     z-index: 999;
     background: #fff;
@@ -40,7 +40,7 @@ a:focus {
 }
 
 #sidebar.active {
-    left: 0;
+    right: 0;
 }
 
 .overlay {

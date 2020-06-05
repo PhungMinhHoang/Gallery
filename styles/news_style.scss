@@ -1,0 +1,124 @@
+@import "variable";
+
+@import "mixin";
+
+@import "sidebar";
+@import "header";
+@import "footer";
+
+/* Setup basics CSS */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  //font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+button {
+  cursor: pointer;
+}
+input,
+textarea,
+button {
+  outline: none;
+  box-shadow: none;
+  font-family: "Lato", sans-serif;
+}
+/* Your style start from here */
+@import "animate";
+.news {
+  padding-top: 60px;
+  overflow-x: hidden;
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+
+    &-img {
+      width: 70%;
+      @include tablet {
+        width: 100%;
+      }
+      @include mobile {
+        width: 100%;
+      }
+    }
+    &-content {
+      width: 30%;
+      @include tablet {
+        width: 100%;
+        margin-top: 10px;
+      }
+      @include mobile {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 40px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      flex-direction: row-reverse;
+    }
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.6;
+    text-transform: uppercase;
+    text-align: center;
+    color: #353738;
+    margin-bottom: 2rem;
+
+    @include mobile {
+      font-size: 1rem;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #848789;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 2rem;
+
+    @include mobile {
+      font-size: 1.5rem;
+      line-height: 1;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.footer{
+  @include mobile{
+    display: none;
+  }
+}
