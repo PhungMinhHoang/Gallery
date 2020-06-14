@@ -150,6 +150,11 @@ ul ul a {
   margin: 0 20px;
 }
 
+.header__menu-item a.active {
+  font-weight: bold;
+  border-bottom: solid 1px;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,9 +183,9 @@ ul ul a {
 
 @media (min-width: 480px) and (max-width: 1023px) {
   .footer {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -303,106 +308,6 @@ button {
 }
 
 /* Your style start from here */
-.animated {
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-.fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-          animation-name: fadeInLeft;
-}
-
-.fadeInRight {
-  -webkit-animation-name: fadeInRight;
-          animation-name: fadeInRight;
-}
-
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-          animation-name: fadeInUp;
-}
-
 .news {
   padding-top: 60px;
   overflow-x: hidden;
@@ -414,22 +319,42 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-height: 100vh;
+}
+
+@media (min-width: 480px) and (max-width: 1023px) {
+  .news__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 479px) {
+  .news__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .news__item-img {
   width: 70%;
+  height: 100vh;
 }
 
 @media (min-width: 480px) and (max-width: 1023px) {
   .news__item-img {
     width: 100%;
+    height: 50vh;
   }
 }
 
 @media (max-width: 479px) {
   .news__item-img {
     width: 100%;
+    height: 50vh;
   }
 }
 
@@ -451,14 +376,14 @@ button {
 @media (min-width: 480px) and (max-width: 1023px) {
   .news__item-content {
     width: 100%;
-    margin-top: 10px;
+    min-height: 50vh;
   }
 }
 
 @media (max-width: 479px) {
   .news__item-content {
     width: 100%;
-    margin-top: 10px;
+    min-height: 50vh;
   }
 }
 

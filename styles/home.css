@@ -150,6 +150,11 @@ ul ul a {
   margin: 0 20px;
 }
 
+.header__menu-item a.active {
+  font-weight: bold;
+  border-bottom: solid 1px;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,9 +183,9 @@ ul ul a {
 
 @media (min-width: 480px) and (max-width: 1023px) {
   .footer {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
