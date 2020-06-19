@@ -5,6 +5,7 @@
   
     position: fixed;
     z-index: 2;
+    top: 0;
     background: #fff;
   
     width: 100%;
@@ -20,6 +21,12 @@
 
     &__menu-item{
       margin: 0 20px;
+      transition: all .2s linear;
+
+      &:hover{
+        font-weight: bold;
+        transform: scale(1.1);
+      }
 
       a.active{
         font-weight: bold;

@@ -55,17 +55,23 @@ button {
     @include mobile {
       width: 100%;
     }
-    
+
     padding: 2px;
     position: relative;
-
-    &-name {
-      display: none;
-    }
 
     img {
       width: 100%;
       height: auto;
+      transition: all 1s ease-in;
+    }
+    &-name {
+      opacity: 0;
+
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+
+      transition: visibility 0s, opacity 2s linear;
     }
 
     &:hover {
@@ -73,11 +79,23 @@ button {
         filter: grayscale(100%);
       }
       .gallery__item-name {
-        display: block;
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
+        opacity: 1;
         color: #fff;
+        animation: neon 0.08s ease-in-out infinite alternate;
+      }
+      @keyframes neon {
+        from {
+          text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+            0 0 30px rgba(202, 228, 225, 0.34),
+            0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92),
+            0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+        }
+        to {
+          text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+            0 0 30px rgba(202, 228, 225, 0.42),
+            0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84),
+            0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px rgba(30, 132, 242, 1);
+        }
       }
     }
   }

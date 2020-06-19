@@ -78,31 +78,19 @@ button {
 
   .button {
     margin-top: 25px;
-
     color: #ffffff;
-    
-    border-color: #00aff0;
-
-    overflow: hidden;
     display: inline-block;
-    min-width: 175px;
-    padding: 17px 33px 15px;
-    font-size: 18px;
-    line-height: 1.34;
-    border: 2px solid;
-    font-family: "Teko", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-weight: 500;
     letter-spacing: 0.075em;
     text-transform: uppercase;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    text-align: center;
     cursor: pointer;
     vertical-align: middle;
     user-select: none;
 
     &:hover{
-      background-color: #00aff0;
+      font-weight: bold;
+      border: solid 1px;
+      padding: 10px 20px;
+      background: #00aff0;
     }
   }
 }
