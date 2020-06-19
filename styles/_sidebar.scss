@@ -37,6 +37,34 @@ a:focus {
   transition: all 0.3s;
   overflow-y: scroll;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+
+  [aria-expanded="true"] {
+    // color: #000;
+    // background: #fff;
+
+    i {
+      transform: rotate(180deg);
+    }
+  }
+
+  a[data-toggle="collapse"] {
+    position: relative;
+  }
+  a:not([data-toggle="collapse"]) {
+    transition: all 0.2s linear;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  .dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
 }
 
 #sidebar.active {
@@ -84,34 +112,6 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-}
-
-a[aria-expanded="true"] {
-  // color: #000;
-  // background: #fff;
-
-  i {
-    transform: rotate(180deg);
-  }
-}
-
-a[data-toggle="collapse"] {
-  position: relative;
-}
-a:not([data-toggle="collapse"]) {
-  transition: all 0.2s linear;
-
-  &:hover {
-    font-weight: bold;
-  }
-}
-
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
 }
 
 #sidebar ul ul li a {

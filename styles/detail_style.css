@@ -47,6 +47,33 @@ a:focus {
           box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
+#sidebar [aria-expanded="true"] i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#sidebar a[data-toggle="collapse"] {
+  position: relative;
+}
+
+#sidebar a:not([data-toggle="collapse"]) {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#sidebar a:not([data-toggle="collapse"]):hover {
+  font-weight: bold;
+}
+
+#sidebar .dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 #sidebar.active {
   right: 0;
 }
@@ -93,39 +120,15 @@ a:focus {
   float: right;
 }
 
-a[aria-expanded="true"] i {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-a[data-toggle="collapse"] {
-  position: relative;
-}
-
-a:not([data-toggle="collapse"]) {
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-
-a:not([data-toggle="collapse"]):hover {
-  font-weight: bold;
-}
-
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
 #sidebar ul ul li a {
   font-size: 1em;
   padding-left: 30px;
   background: #fff;
 }
 
+/* ---------------------------------------------------
+    HEADER STYLE
+----------------------------------------------------- */
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,12 +161,12 @@ a:not([data-toggle="collapse"]):hover {
 
 .header__menu-item {
   margin: 0 20px;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .header__menu-item:hover {
-  font-weight: bold;
+  text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }

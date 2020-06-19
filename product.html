@@ -19,9 +19,11 @@
     <header class="header">
         <nav class="header__menu">
             <ul class="header__menu-list">
-                <li class="header__menu-item"><a href="">All</a></li>
-                <li class="header__menu-item"><a href="">HOUSE</a></li>
-                <li class="header__menu-item"><a href="">CAFE</a></li>
+                <li class="header__menu-item"><a href="" class="active">All</a></li>
+                <li class="header__menu-item"><a href="">House Villas
+                </a></li>
+                <li class="header__menu-item"><a href="">Cafe Shop - Restaurant
+                </a></li>
             </ul>
         </nav>
         <button type="button" id="sidebarCollapse" class="btn btn-default">
@@ -221,7 +223,7 @@
         });
 
         $('img.lazy').load(function () {
-            masonry_update();
+            //masonry_update();
         });
 
         $('.carousel').carousel({
@@ -240,7 +242,7 @@
 
         });
         $('.carousel').bind('slid.bs.carousel', function (e) {
-            masonry_update();
+            //masonry_update();
         });
 
         function masonry_update() {

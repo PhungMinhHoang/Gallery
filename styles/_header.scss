@@ -1,36 +1,38 @@
+/* ---------------------------------------------------
+    HEADER STYLE
+----------------------------------------------------- */
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  background: #fff;
+
+  width: 100%;
+  height: 60px;
+
+  &__menu-list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    background: #fff;
-  
-    width: 100%;
-    height: 60px;
-
-    &__menu-list{
-      display: flex;
-
-      @include mobile{
-        display: none;
-      }
-    }
-
-    &__menu-item{
-      margin: 0 20px;
-      transition: all .2s linear;
-
-      &:hover{
-        font-weight: bold;
-        transform: scale(1.1);
-      }
-
-      a.active{
-        font-weight: bold;
-        border-bottom: solid 1px;
-      }
+    @include mobile {
+      display: none;
     }
   }
+
+  &__menu-item {
+    margin: 0 20px;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+      transform: scale(1.1);
+    }
+
+    a.active {
+      font-weight: bold;
+      border-bottom: solid 1px;
+    }
+  }
+}
