@@ -328,29 +328,37 @@ button {
 
 /* Your style start from here */
 .gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.gallery__item {
-  width: 25%;
-  padding: 2px;
-  position: relative;
+  padding-top: 60px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25vw)[4];
+      grid-template-columns: repeat(4, 25vw);
+  -ms-grid-rows: 25vw;
+      grid-template-rows: 25vw;
 }
 
 @media (min-width: 480px) and (max-width: 1023px) {
-  .gallery__item {
-    width: 50%;
+  .gallery {
+    -ms-grid-columns: (50vw)[2];
+        grid-template-columns: repeat(2, 50vw);
+    -ms-grid-rows: 50vw;
+        grid-template-rows: 50vw;
   }
 }
 
 @media (max-width: 479px) {
-  .gallery__item {
-    width: 100%;
+  .gallery {
+    -ms-grid-columns: 100vw;
+        grid-template-columns: 100vw;
+    -ms-grid-rows: 100vw;
+        grid-template-rows: 100vw;
   }
+}
+
+.gallery__item {
+  width: 100%;
+  padding: 2px;
+  position: relative;
 }
 
 .gallery__item .carousel,
