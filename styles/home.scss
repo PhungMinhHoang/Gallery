@@ -45,7 +45,8 @@ button {
 @import "animate";
 
 .wrapper {
-  background-image: url(../images/slider-1-slide-3-1770x742.jpg);
+  background-image: url(../images/home.jpg);
+  // background-image: url(~/Content/Website/images/home.jpg);
   background-size: cover;
 
   width: 100%;
@@ -59,21 +60,14 @@ button {
 
   color: #fff;
 
-  h1 {
-    font-size: 80px;
-    text-align: center;
-    text-transform: uppercase;
-
-    @include tablet {
-      font-size: 70px;
-    }
-    @include mobile {
-      font-size: 50px;
-    }
+  .logo {
+    width: 300px;
   }
-  p{
+  p {
     margin-top: 25px;
+    font-size: 24px;
     text-align: center;
+    text-shadow: 2px 2px #000;
   }
 
   .button {
@@ -86,11 +80,11 @@ button {
     vertical-align: middle;
     user-select: none;
 
-    &:hover{
+    &:hover {
       font-weight: bold;
       border: solid 1px;
       padding: 10px 20px;
-      background: #00aff0;
+      background: grey;
     }
   }
 }

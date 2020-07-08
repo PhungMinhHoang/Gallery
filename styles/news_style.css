@@ -147,6 +147,20 @@ a:focus {
   height: 60px;
 }
 
+.header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__left .logo {
+  width: 100px;
+}
+
 .header__menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,6 +188,10 @@ a:focus {
 .header__menu-item a.active {
   font-weight: bold;
   border-bottom: solid 1px;
+}
+
+.header button i {
+  font-size: 24px;
 }
 
 .footer {

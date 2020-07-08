@@ -1,207 +1,291 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gallery</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="./styles/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="./styles/jquery.mCustomScrollbar.min.css" />
 
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/fontawesome.css" />
     <link rel="stylesheet" href="./styles/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
+      <div class="header__left">
+        <a href="/" class="logo">
+          <img src="./images/logo.png" />
+        </a>
         <nav class="header__menu">
-            <ul class="header__menu-list">
-                <li class="header__menu-item"><a href="" class="active">All</a></li>
-                <li class="header__menu-item"><a href="">House Villas
-                </a></li>
-                <li class="header__menu-item"><a href="">Cafe Shop - Restaurant
-                </a></li>
-            </ul>
+          <ul class="header__menu-list">
+            <li class="header__menu-item"><a href="" class="active">All</a></li>
+            <li class="header__menu-item"><a href="">House Villas </a></li>
+            <li class="header__menu-item">
+              <a href="">Cafe Shop - Restaurant </a>
+            </li>
+          </ul>
         </nav>
-        <button type="button" id="sidebarCollapse" class="btn btn-default">
-            <i class="fa fa-bars"></i>
-        </button>
+      </div>
+      <button type="button" id="sidebarCollapse" class="btn btn-default">
+        <i class="fa fa-bars"></i>
+      </button>
     </header>
 
     <!-- Sidebar -->
     <nav id="sidebar">
-        <ul class="list-unstyled components">
+      <ul class="list-unstyled components">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li class="active">
+          <a href="#project" data-toggle="collapse" aria-expanded="false"
+            >Project <i class="fas fa-angle-down"></i
+          ></a>
+          <ul class="collapse list-unstyled" id="project">
             <li>
-                <a href="#">Home</a>
-            </li>
-            <li class="active">
-                <a href="#project" data-toggle="collapse" aria-expanded="false">Project <i
-                        class="fas fa-angle-down"></i></a>
-                <ul class="collapse list-unstyled" id="project">
-                    <li>
-                        <a href="#">House</a>
-                    </li>
-                    <li>
-                        <a href="#">Cafe</a>
-                    </li>
-                </ul>
+              <a href="#">House</a>
             </li>
             <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Construction <i
-                        class="fas fa-angle-down"></i></a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">House</a>
-                    </li>
-                    <li>
-                        <a href="#">Cafe</a>
-                    </li>
-                </ul>
+              <a href="#">Cafe</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+            >Construction <i class="fas fa-angle-down"></i
+          ></a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+              <a href="#">House</a>
             </li>
             <li>
-                <a href="#">News</a>
+              <a href="#">Cafe</a>
             </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
+          </ul>
+        </li>
+        <li>
+          <a href="#">News</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
     </nav>
 
     <!-- Content -->
     <div class="gallery" id="gallery">
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <div class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="item lazy d-block w-100" data-original="./images/158136193982033.jpg"
-                                alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="item lazy d-block w-100" data-original="./images/158135566331662.jpg"
-                                alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="item lazy d-block w-100" data-original="./images/148428550658817.jpg"
-                                alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/158135566331662.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/148428550658817.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/148472823370273.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/148424887313939.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/148464048294411.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/158136193982033.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/158136193982033.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/158136193982033.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/158136193982033.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/158136193982033.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/158136193982033.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/158136193982033.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/158136193982033.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-        <div class="gallery__item">
-            <a href="./detail.html" class="gallery__item-link">
-                <img class="item lazy" data-original="./images/158136193982033.jpg" alt="image">
-            </a>
-            <span class="gallery__item-name">CLOUND COFFE</span>
-        </div>
-
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <div class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  class="item lazy d-block w-100"
+                  data-original="./images/158136193982033.jpg"
+                  alt="First slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="item lazy d-block w-100"
+                  data-original="./images/158135566331662.jpg"
+                  alt="Second slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="item lazy d-block w-100"
+                  data-original="./images/148428550658817.jpg"
+                  alt="Third slide"
+                />
+              </div>
+            </div>
+          </div>
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/158135566331662.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/148428550658817.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/148472823370273.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/148424887313939.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/148464048294411.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/158136193982033.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/158136193982033.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/158136193982033.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/158136193982033.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/158136193982033.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/158136193982033.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/158136193982033.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/158136193982033.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
+      <div class="gallery__item">
+        <a href="./detail.html" class="gallery__item-link">
+          <img
+            class="item lazy"
+            data-original="./images/158136193982033.jpg"
+            alt="image"
+          />
+        </a>
+        <span class="gallery__item-name">CLOUND COFFE</span>
+      </div>
     </div>
 
     <div class="overlay"></div>
 
     <!-- Footer -->
     <div class="footer">
-        <div class="footer__copyright">
-            <span>© Kbox Studio </span>
-        </div>
-        <div class="social">
-            <ul class="social__list">
-                <li class="social__item social__item--fb"><a href="" class="social__link"><i
-                            class="fab fa-facebook-f"></i></a></li>
-                <li class="social__item social__item--in"><a href="" class="social__link"><i
-                            class="fab fa-instagram"></i></a></li>
-                <li class="social__item social__item--pi"><a href="" class="social__link"><i
-                            class="fab fa-pinterest"></i></a></li>
-                <li class="social__item social__item--up"><a href="#" class="social__link" id="scrollToTop"><i
-                            class="fa fa-angle-up"></i></a></li>
-            </ul>
-        </div>
+      <div class="footer__copyright">
+        <span>© Kbox Studio </span>
+      </div>
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item social__item--fb">
+            <a href="" class="social__link"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li class="social__item social__item--in">
+            <a href="" class="social__link"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="social__item social__item--pi">
+            <a href="" class="social__link"><i class="fab fa-pinterest"></i></a>
+          </li>
+          <li class="social__item social__item--up">
+            <a href="#" class="social__link" id="scrollToTop"
+              ><i class="fa fa-angle-up"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <script src="./js/jquery.min.js"></script>
@@ -216,46 +300,47 @@
     <script src="./js/main.js"></script>
 
     <script>
-        $("img.lazy").lazyload({
-            effect: 'fadeIn',
-            effectspeed: 1000,
-            threshold: 3000
+      $("img.lazy").lazyload({
+        effect: "fadeIn",
+        effectspeed: 1000,
+        threshold: 3000,
+      });
+
+      $("img.lazy").load(function () {
+        //masonry_update();
+      });
+
+      $(".carousel")
+        .carousel({
+          interval: 2000,
+          pause: false,
+        })
+        .on("mouseenter", function () {
+          $(this).carousel("cycle");
+        })
+        .on("mouseleave", function () {
+          $(this).carousel("pause");
         });
 
-        $('img.lazy').load(function () {
-            //masonry_update();
-        });
+      $(".carousel").bind("slide.bs.carousel", function (e) {
+        var image = $(e.relatedTarget).find("img[data-original]");
+        image.attr("src", image.data("original"));
+        image.removeAttr("data-original");
+      });
+      $(".carousel").bind("slid.bs.carousel", function (e) {
+        //masonry_update();
+      });
 
-        $('.carousel').carousel({
-            interval: 2000,
-            pause: false
-        }).on("mouseenter", function () {
-            $(this).carousel('cycle');
-        }).on("mouseleave", function () {
-            $(this).carousel('pause');
+      function masonry_update() {
+        var $works_list = $(".gallery");
+        $works_list.imagesLoaded(function () {
+          $works_list.masonry({
+            itemSelector: ".gallery__item",
+            columnWidth: ".gallery__item",
+            percentPosition: true,
+          });
         });
-
-        $('.carousel').bind('slide.bs.carousel', function (e) {
-            var image = $(e.relatedTarget).find('img[data-original]');
-            image.attr('src', image.data('original'));
-            image.removeAttr('data-original');
-
-        });
-        $('.carousel').bind('slid.bs.carousel', function (e) {
-            //masonry_update();
-        });
-
-        function masonry_update() {
-            var $works_list = $('.gallery');
-            $works_list.imagesLoaded(function () {
-                $works_list.masonry({
-                    itemSelector: '.gallery__item',
-                    columnWidth: '.gallery__item',
-                    percentPosition: true
-                });
-            });
-        }
+      }
     </script>
-</body>
-
+  </body>
 </html>

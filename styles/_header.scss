@@ -14,6 +14,15 @@
   width: 100%;
   height: 60px;
 
+  &__left {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    .logo {
+      width: 100px;
+    }
+  }
+
   &__menu-list {
     display: flex;
     @include mobile {
@@ -34,5 +43,9 @@
       font-weight: bold;
       border-bottom: solid 1px;
     }
+  }
+
+  button i {
+    font-size: 24px;
   }
 }
