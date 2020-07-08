@@ -333,23 +333,28 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100vw;
+  padding-top: 60px;
 }
 
 .gallery__item {
-  width: 25%;
+  width: 25vw;
+  height: 25vw;
   padding: 2px;
   position: relative;
 }
 
 @media (min-width: 480px) and (max-width: 1023px) {
   .gallery__item {
-    width: 50%;
+    width: 50vw;
+    height: 50vw;
   }
 }
 
 @media (max-width: 479px) {
   .gallery__item {
-    width: 100%;
+    width: 100vw;
+    height: 100vw;
   }
 }
 

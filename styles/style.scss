@@ -46,17 +46,21 @@ button {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  width: 100vw;
+  padding-top: 60px;
 
   &__item {
-    width: 25%;
+    width: 25vw;
+    height: 25vw;
+    padding: 2px;
     @include tablet {
-      width: 50%;
+      width: 50vw;
+      height: 50vw;
     }
     @include mobile {
-      width: 100%;
+      width: 100vw;
+      height: 100vw;
     }
-
-    padding: 2px;
     position: relative;
 
     .carousel,
